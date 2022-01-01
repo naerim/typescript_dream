@@ -15,6 +15,7 @@ const result = students.every((student) => {
 });
 console.log(result);
 
+// 서브 타입 확인 예제
 class Animal {}
 class Cat extends Animal {
   isCat: boolean = true;
