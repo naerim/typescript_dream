@@ -1,4 +1,5 @@
 {
+  //
   type NetworkErrorState = {
     result: "fail";
     reason: "offline" | "down" | "timeout";
