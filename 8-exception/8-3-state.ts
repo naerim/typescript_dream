@@ -1,14 +1,22 @@
 {
+  type NetworkErrorState = {
+    result: "fail";
+    reason: "offline" | "down" | "timeout";
+  };
+
+  type SuccessState = {
+    result: "success";
+  };
+
+  type ResultState = SuccessState | NetworkErrorState;
   class NetworkClient {
-    tryConnect(): void {
-      throw new Error("no network!");
-    }
+    // tryConnect(): ResultState {}
   }
 
   class UserService {
     constructor(private client: NetworkClient) {}
     login() {
-      this.client.tryConnect();
+      // this.client.tryConnect();
       // login...
     }
   }
